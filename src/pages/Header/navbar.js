@@ -2,7 +2,7 @@ import React from "react";
 import "./navbar.css";
 import ct from "../../assets/Image/ct.png";
 import { ButtonGroup, Button,Grid, TextField  } from "@mui/material";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 
 
@@ -43,8 +43,8 @@ const Navbar = () => {
         </Grid>
         <Grid item md={3} sx={{textAlign:"center"}}>
           <ButtonGroup variant="outlined" aria-label="outlined button group">
-            <Button>Iniciar Sesión</Button>
-            <Button>Registrarse</Button>
+            <Button >Iniciar Sesión</Button>
+            <Button component={Link} to="/signup">Registrarse</Button>
           </ButtonGroup>
         </Grid>
         </Grid>

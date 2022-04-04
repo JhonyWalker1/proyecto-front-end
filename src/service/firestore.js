@@ -1,5 +1,7 @@
 import  {initializeApp } from "firebase/app"
 import { getFirestore, collection, getDocs } from "firebase/firestore/lite";
+import {getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile, onAuthStateChanged, sendEmailVerification} from "firebase/auth";
+import { async } from "@firebase/util";
 
 
 const firebaseConfig = {
@@ -26,4 +28,41 @@ export const getAtractivo = async () => {
   // paso 3: Crear un arreglo que guarde los documentos que estamos obteniendo
   const region = documentRegion.docs.map((doc) => doc.data());
   return region;
+
 };
+
+export const auth = getAuth();
+
+export const storeUser = async (email, password) => {
+  try{
+    const user = await createUserWithEmailAndPassword(auth, email, password);
+    console.log(user);
+    return {
+      ok:true,
+      data: user,
+    }
+  }catch(error){
+    console.log(error);
+    return {
+      ok:false,
+      data: error.message,
+    }
+  }
+}
+
+export const loginUser = async (email, password) => {
+  try{
+    const user = await signInWithEmailAndPassword(auth, email, password);
+    console.log(user);
+    return {
+      ok:true,
+      data: user,
+    }
+  }catch(error){
+    console.log(error);
+    return {
+      ok:false,
+      data: error.message,
+    }
+  }
+}
