@@ -1,42 +1,106 @@
 import { useState, useEffect } from "react";
-import {Container, Grid, Button} from "@mui/material"
-import {getAtractivo} from "../../service/firestore";
+import { Container, Grid } from "@mui/material";
+import { getAtractivo } from "../../service/firestore";
 import "./center.css";
+import { Card,CarouselItem,CarouselCaption,Carousel, Button } from "react-bootstrap";
+
+
+
 
 const PopularRegion = () => {
-    const [region, setRegion] = useState([]);
+  const [region, setRegion] = useState([]);
 
-    const fetchRegion = async () =>{
-        const data = await getAtractivo();
-        console.log(data);
-        setRegion(data);
-    };
+  const fetchRegion = async () => {
+    const data = await getAtractivo();
+    console.log(data);
+    setRegion(data);
+  };
 
-    useEffect(() => {
-        fetchRegion();
-    }, []);
+  const handleClick = async (name) => {
+    if (name === "costa") {
+      window.location.href = "/costa";
+      return;
+    }
+    if (name === "sierra") {
+      window.location.href = "/sierra";
+      return;
+    }
+    if (name === "selva") {
+      window.location.href = "/selva";
+      return;
+    }
+  }
+    
+  
 
-    return (
-        <Container maxWidth="xl">
-            <Grid container mt={1}>
-                <Grid item md={12} sm={12} xs={12}>
-                    <h1>Popular Region</h1>
-                </Grid>
-                {region.length>0 && region.map((reg)=>(
-                    <Grid item md={4} sm={6} xs={12}  className="card">
-                        <img className="product-photo" src={reg.photo} alt=""/>
-                        <div className="description">
-                            <h4>{reg.nombre}</h4>
-                            <p>{reg.contenido}</p>
-                        </div>
-                        <div className="btn-ver">
-                        <Button variant="contained" color="primary" >Ver más </Button>
-                        </div>
-                    </Grid>
-                ))}
+
+  useEffect(() => {
+    fetchRegion();
+  }, []);
+
+  return (
+    <Container maxWidth="xl">
+      <Grid container mt={1}>
+        <Carousel fade className="carousel-width">
+          <Carousel.Item interval={1000}>
+            <img
+              className="d-block w-100"
+              src="https://www.ytuqueplanes.com/imagenes/fotos/novedades/zona-de-anfiteatro.jpg"
+              alt="marcahuasiLima"
+              
+            />
+            <Carousel.Caption>
+              <h1>Lima</h1>
+              <p >Marcahuasi bOsque de Piedras</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item interval={1000}>
+            <img
+              className="d-block w-100"
+              src="https://cdn.getyourguide.com/img/location/5963815c2dc3b.jpeg/88.jpg"
+              alt="islasBallestasIca"
+              
+            />
+            <Carousel.Caption>
+              <h1>Ica</h1>
+              <p>IslasBallestas</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item interval={1000}>
+            <img
+              className="d-block w-100"
+              src="https://selina-res.cloudinary.com/image/upload/if_iw_gt_1584,c_scale,w_1584/e_sharpen:80,q_auto:good/f_auto/v1/s-cf-1/xdw7oj4u3s4v/1xZZEml4gStiyXtt8VgJGB/8790e0e2b34a9a7b002aff36f04ec26b/Selina_Mancora_Surf_Lifestyle_01-2021_credits_AlexanderEstrada_.jpeg"
+              alt="mancoraPiura"
+              
+            />
+            <Carousel.Caption>
+              <h1>Piura</h1>
+              <p>Mancora</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+
+        <Grid item md={12} sm={12} xs={12}>
+          <h1 style={{textAlign:"center", margin:"20px"}}>Popular Region</h1>
+        </Grid>
+        {region.length > 0 &&
+          region.map((reg) => (
+            <Grid item md={4} sm={6} xs={12} className="card-pr">
+              <Card style={{ width: "30rem", height:"100%", marginLeft:"5px", textAlign: "center"}}>
+                <Card.Img variant="top" src={reg.photo} style={{height:"300px"}} />
+                <Card.Body>
+                  <Card.Title>{reg.nombre}</Card.Title>
+                  <Card.Text>
+                  {reg.contenido}
+                  </Card.Text>
+                  <Button variant="outline-primary" size="lg" className="btn-vermas" onClick={handleClick(reg.nombre)}>Ver más</Button>{' '}
+                </Card.Body>
+              </Card>
             </Grid>
-       </Container>
-    );
+          ))}
+      </Grid>
+    </Container>
+  );
 };
 
 export default PopularRegion;

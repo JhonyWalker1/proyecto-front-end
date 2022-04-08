@@ -6,7 +6,7 @@ import { Outlet, Link } from "react-router-dom";
 
 
 
-const Navbar = () => {
+const Main = () => {
 
   return (
     <div>
@@ -54,4 +54,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Main;

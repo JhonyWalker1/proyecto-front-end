@@ -1,40 +1,28 @@
-.description {
-   
-    font-size: 14px;
-    font-weight: 300;
-    color: #374151;
-    text-transform: capitalize;
-    text-align: center;
-    margin-left: 50px;
-    margin-right: 50px;
-  }
+body{
+  overflow-x: hidden;
+}
 
-  
-  .product-photo {
-    width: 350px;
-    height: 350px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    border-radius: 10px;
-    
-    
-  }
+.carousel-width{
+  width: 100%;
+}
 
-  .card{
-    align-items: center;
-    text-align: center;
-    margin-left: 10px;
-    position: relative;
-    height: 65vh;
-  
-      
-  }
+.w-100{
+  width: 100% !important;
+  height: 500px !important;
+}
 
-  .btn-ver{
-      position: absolute;
-      bottom: 0px;
-      left: 40%;
-          text-align: center;
-      align-content: center;
-  }
+.btn-vermas{
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+
+ 
+
+

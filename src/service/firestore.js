@@ -1,7 +1,7 @@
 import  {initializeApp } from "firebase/app"
-import { getFirestore, collection, getDocs } from "firebase/firestore/lite";
+import { getFirestore, collection, getDocs, doc, setDoc, updateDoc,deleteDoc} from "firebase/firestore/lite";
 import {getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile, onAuthStateChanged, sendEmailVerification} from "firebase/auth";
-import { async } from "@firebase/util";
+import {v4 as uuidv4} from "uuid";
 
 
 const firebaseConfig = {
@@ -19,6 +19,8 @@ const app = initializeApp(firebaseConfig);
 // database : base de datos
 const db = getFirestore(app);
 
+
+//todo PARA ATRACTIVOS
 // Hacer la peticion para poder traer los productos
 export const getAtractivo = async () => {
   // paso 1: Traer la coleccion de datos
@@ -32,6 +34,8 @@ export const getAtractivo = async () => {
 };
 
 export const auth = getAuth();
+
+
 
 export const storeUser = async (email, password) => {
   try{
@@ -63,6 +67,39 @@ export const loginUser = async (email, password) => {
     return {
       ok:false,
       data: error.message,
+    }
+  }
+}
+
+//TODO PARA USUARIOS
+export const getUser = async () => {
+  // paso 1: Traer la coleccion de datos
+  const collectionUser = collection(db, "user_created");
+  // paso 2: Traer los documentos
+  const documentUser = await getDocs(collectionUser);
+  // paso 3: Crear un arreglo que guarde los documentos que estamos obteniendo
+  const user_c = documentUser.docs.map((doc) => doc.data());
+  return user_c;
+};
+
+export const storeUserC = async (userc) => {
+  const id= uuidv4().replaceAll("-","")
+  userc.id=id;
+  await setDoc(doc(db, "user_created",id ), userc);
+};
+
+export const updateUserProfile = async (profile) => {
+  try{
+    const user = await updateProfile(auth.currentUser, profile);
+    return{
+      ok:true,
+      data:user,
+    }
+
+  }catch(error){
+    return{
+      ok: false,
+      data:error.message
     }
   }
 }

@@ -1,21 +1,12 @@
- body{
-    background-image: url("../../assets/back.jpg");
-
- }
+ 
 
 .contenedor_center{
+    background-color: aliceblue;
     justify-content: center;
     align-items: center;
-    height: 102vh;
-    
+    height: 101vh;
+    padding-top: 50px;
    text-align: center;
+   padding-bottom: 50px;
 }
 
-.img_signup{
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-   
-}

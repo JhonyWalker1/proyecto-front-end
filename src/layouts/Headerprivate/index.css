@@ -1,0 +1,27 @@
+.navegador {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .ul-ecommerce {
+    
+    list-style: none;
+  
+  }
+  .ul-ecommerce li a {
+      color: black;
+    text-decoration: none;
+    margin: 10px;
+  }
+  
+  .txt-field {
+    width: 50px;
+    text-align: center;
+  }
+  
+  
+  .img-logo {
+    width: 100px;
+    height: 100px;
+  }
