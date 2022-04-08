@@ -18,17 +18,19 @@ const PopularRegion = () => {
 
   const handleClick = async (name) => {
     if (name === "costa") {
-      window.location.href = "/costa";
-      return;
-    }
-    if (name === "sierra") {
-      window.location.href = "/sierra";
-      return;
-    }
-    if (name === "selva") {
-      window.location.href = "/selva";
-      return;
-    }
+      window.location.href = "/home/costa";
+         return;
+     } else if (name === "sierra") {
+        window.location.href = "/home/sierra";
+        return;
+      } else if (name === "selva") {
+        window.location.href = "/home/selva";
+        return;
+      }
+    
+      // Profesor porque en la pagina home donde esta mis cards automaticamente 
+      // se redirige a cualquiera de las pag de mis if sin yo hacer el click en ver más
+    
   }
     
   
@@ -96,7 +98,7 @@ const PopularRegion = () => {
                   <Button variant="outline-primary" 
                   size="lg" 
                   className="btn-vermas" 
-                  /* onClick={handleClick(reg.nombre)} */
+                  /* onClick={handleClick(reg.nombre)}  */
                   >
                     Ver más</Button>{' '}
                 </Card.Body>

@@ -21,7 +21,7 @@ const Router = () => {
         {/* ROUTE DEL USUARIO (PRIVADAS) */}
         <Route element={<Mainprivate />}>
         <Route path="/home" element={<PopularRegion />} />
-        <Route path="/costa" element={<Costa />} />
+        <Route path="/home/costa" element={<Costa />} />
           <Route element={<Private />}>
             <Route path="/profile" element={<Profile />} />
           </Route>
