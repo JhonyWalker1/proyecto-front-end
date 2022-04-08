@@ -93,7 +93,12 @@ const PopularRegion = () => {
                   <Card.Text>
                   {reg.contenido}
                   </Card.Text>
-                  <Button variant="outline-primary" size="lg" className="btn-vermas" onClick={handleClick(reg.nombre)}>Ver más</Button>{' '}
+                  <Button variant="outline-primary" 
+                  size="lg" 
+                  className="btn-vermas" 
+                  /* onClick={handleClick(reg.nombre)} */
+                  >
+                    Ver más</Button>{' '}
                 </Card.Body>
               </Card>
             </Grid>
