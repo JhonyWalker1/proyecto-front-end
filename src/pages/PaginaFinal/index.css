@@ -1,0 +1,18 @@
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.img-sierra{
+    min-height: 250px;
+    max-height: 250px;
+    object-fit: contain !important;
+    margin-top: 15px;
+}
+
+
+.carousel-width {
+    align-content: center;
+    margin-left: 2%;
+    
+}
