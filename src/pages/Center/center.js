@@ -98,7 +98,7 @@ const PopularRegion = () => {
                   <Button variant="outline-primary" 
                   size="lg" 
                   className="btn-vermas" 
-                  /* onClick={handleClick(reg.nombre)}  */
+                   onClick={()=>handleClick(reg.nombre)}  
                   >
                     Ver más</Button>{' '}
                 </Card.Body>

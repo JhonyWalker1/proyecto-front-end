@@ -1,9 +1,9 @@
 import { Container, Grid, Button } from "@mui/material";
 import { Carousel, CarouselItem } from "react-bootstrap";
 import "./index.css";
-import pacayaSamiriaLoreto from "../../assets/pacayaSamiriaLoreto"
-import cataratasGoctaChachapoyas from "../../assets/cataratasGoctaChachapoyas"
-import fortalezaKuelapChachapoyas from "../../assets/fortalezaKuelapChachapoyas"
+import pacayaSamiriaLoreto from "../../assets/pacayaSamiriaLoreto.jpg"
+import catarataGoctaChachapoyas from "../../assets/catarataGoctaChachapoyas.jpg"
+import fortalezaKuelapChachapoyas from "../../assets/fortalezaKuelapChachapoyas.jpg"
 
 
 const Selva = () => {
@@ -27,7 +27,7 @@ const Selva = () => {
           <Carousel.Item interval={1000}>
             <img
               className="d-block w-100"
-              src={cataratasGoctaChachapoyas}
+              src={catarataGoctaChachapoyas}
               alt="cataratasGocta"
             />
             <Carousel.Caption>
@@ -133,7 +133,7 @@ const Selva = () => {
         </Grid>
         <Grid item md={10}>
           <img
-            src={cataratasGoctaChachapoyas}
+            src={catarataGoctaChachapoyas}
             height={562}
             width={950}
           ></img>
