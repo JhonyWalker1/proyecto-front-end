@@ -8,6 +8,7 @@ import Login from "../pages/Login";
 import Mainprivate from "../layouts/Headerprivate";
 import Costa from "../pages/PaginaCosta";
 import Sierra from "../pages/PaginaSierra";
+import EndSierra from "../pages/PaginaFinal";
 
 const Router = () => {
   return (
@@ -24,6 +25,7 @@ const Router = () => {
         <Route path="/home" element={<PopularRegion />} />
         <Route path="/costa" element={<Costa />} />
         <Route path="/sierra" element={<Sierra />} />
+        <Route path="/EndSierra" element={<EndSierra />} />
           <Route element={<Private />}>
             <Route path="/profile" element={<Profile />} />
           </Route>
