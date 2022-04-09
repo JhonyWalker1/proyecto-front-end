@@ -1,11 +1,16 @@
 import { Grid, Card, CardContent, TextField, Button } from "@mui/material";
 import swal from "sweetalert";
 import bgLogin from "../../assets/fondo_signup.png";
-import { loginUser, storeUser } from "../../service/firestore";
-import { useState } from "react";
-import bg_lg from "../../assets/bg_lg.jpg";
+import { loginUser, storeUser as storeUserFirebase } from "../../service/firestore";
+
+
+import { useState,useContext } from "react";
+
 
 const Login = () => {
+
+
+
   const [userData, setUserData] = useState({
     email: "",
     password: "",
@@ -21,7 +26,7 @@ const Login = () => {
     const { email, password } = userData;
     let response = await loginUser(email, password);
     if (!response.ok) {
-      response = await storeUser(email, password);
+      response = await storeUserFirebase(email, password);
 
       if (!response.ok) {
         swal({
@@ -33,7 +38,7 @@ const Login = () => {
         return;
       }
     }
-    storeUser(response.data.user);
+    storeUserFirebase(response.data.user);
     window.location.href = "/home";
   };
 

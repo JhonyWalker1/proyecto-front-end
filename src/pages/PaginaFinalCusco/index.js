@@ -1,9 +1,9 @@
 import { Container, Grid } from "@mui/material";
 import { Carousel, CarouselItem } from "react-bootstrap";
 import { Card, CardContent, CardMedia, Typography, Button } from "@mui/material";
-import "../PaginaFinal/index.css";
+import "./index.css";
 
-const EndSierra = () => {
+const Cusco = () => {
   return (
 
     <Grid container spacing={3}>
@@ -239,4 +239,4 @@ const EndSierra = () => {
     </Grid>
   );
 };
-export default EndSierra;
+export default Cusco;

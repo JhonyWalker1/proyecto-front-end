@@ -3,7 +3,7 @@ import { Carousel, CarouselItem } from "react-bootstrap";
 import { Card, CardContent, CardMedia, Typography, Button } from "@mui/material";
 import "../PaginaFinalPuno/index.css";
 
-const EndPuno = () => {
+const Puno = () => {
   return (
 
     <Grid container spacing={3}>
@@ -239,4 +239,4 @@ const EndPuno = () => {
     </Grid>
   );
 };
-export default EndPuno;
+export default Puno;

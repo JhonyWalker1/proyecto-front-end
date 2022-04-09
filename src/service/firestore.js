@@ -33,9 +33,9 @@ export const getAtractivo = async () => {
 
 };
 
+
+//TODO: AUTENTICACION
 export const auth = getAuth();
-
-
 
 export const storeUser = async (email, password) => {
   try{

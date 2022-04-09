@@ -53,7 +53,7 @@ const PopularRegion = () => {
             />
             <Carousel.Caption>
               <h1>Lima</h1>
-              <p >Marcahuasi bOsque de Piedras</p>
+              <p >Marcahuasi bosque de Piedras</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item interval={1000}>

@@ -92,7 +92,9 @@ const Sierra = () => {
              arqueológico que allí se encuentra.
           </p>
 
+          <a href="/home/sierra/cusco">
           <Button variant="contained">Saber más</Button>
+          </a>
         </Grid>
       </Grid>
       <Grid container mt={1}>
@@ -150,7 +152,9 @@ const Sierra = () => {
           ¡Es una experiencia imperdible! Conoce Puno, vive unos días en un mundo hecho de totora, 
           rodeado del hermoso LagoTiticaca, acompañado por la cultura milenaria de los Uros.
           </p>
+          <a href="/home/sierra/puno">
           <Button variant="contained">Saber más</Button>
+          </a>
         </Grid>
       </Grid>
     </Container>

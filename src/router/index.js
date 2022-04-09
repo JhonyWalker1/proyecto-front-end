@@ -7,7 +7,14 @@ import Profile from "../pages/Profile";
 import Login from "../pages/Login";
 import Mainprivate from "../layouts/Headerprivate";
 import Costa from "../pages/PaginaCosta";
-
+import Sierra from "../pages/PaginaSierra";
+import Selva from "../pages/PaginaSelva";
+import Puno from "../pages/PaginaFinalPuno";
+import Cusco from "../pages/PaginaFinalCusco";
+import EndAmazonas from "../pages/PaginaFinalAmazonas";
+import EndIca from "../pages/PagFinalIca";
+import EndLima from "../pages/PagFinalLima";
+import EndLoreto from "../pages/PagFinalLoreto";
 
 const Router = () => {
   return (
@@ -21,10 +28,19 @@ const Router = () => {
         </Route>
         {/* ROUTE DEL USUARIO (PRIVADAS) */}
         <Route element={<Mainprivate />}>
-        <Route path="/home" element={<PopularRegion />} />
-
+          <Route path="/home" element={<PopularRegion />} />
+          <Route path="/home/costa" element={<Costa />} />
+          <Route path="/home/sierra" element={<Sierra />} />
+          <Route path="/home/selva" element={<Selva />} />
+          <Route path="/home/sierra/puno" element={<Puno />} />
+          <Route path="/home/sierra/cusco" element={<Cusco />} />
+          <Route path="/home/selva/amazonas" element={<EndAmazonas />} />
+          <Route path="/home/costa/ica" element={<EndIca />} />
+          <Route path="/home/costa/lima" element={<EndLima />} />
+          <Route path="/home/selva/loreto" element={<EndLoreto />} />
+          
           <Route element={<Private />}>
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/home/profile" element={<Profile />} />
           </Route>
         </Route>
       </Routes>

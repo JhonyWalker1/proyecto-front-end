@@ -105,8 +105,9 @@ const Selva = () => {
         por recorrer, tanto a pie como en canoas.
         
           </p>
-
+          <a href="/home/selva/loreto">
           <Button variant="contained">Saber más</Button>
+          </a>
         </Grid>
       </Grid>
 
@@ -160,6 +161,7 @@ const Selva = () => {
           Ya en el destino se anima a los visitantes a la degustación del guarapo (bebida típica de
            jugo de caña) y por fín disfrutar del mágico lugar.
           </p>
+          <a href="/home/selva/amazonas"></a>
           <Button variant="contained">Saber más</Button>
         </Grid>
       </Grid>

@@ -1,15 +1,16 @@
 
-import React from "react";
 import "./index.css";
 import ct from "../../assets/Image/ct.png";
-import { ButtonGroup, Button,Grid, TextField  } from "@mui/material";
-import { Outlet, Link } from "react-router-dom";
+import { ButtonGroup, Button,Grid  } from "@mui/material";
+import { Outlet, Link,Navigate } from "react-router-dom";
+
 
 
 
 
 
 const Mainprivate = () => {
+  
 
     return (
       <div>
@@ -38,7 +39,7 @@ const Mainprivate = () => {
           
           <Grid item md={3} sx={{textAlign:"center"}}>
             <ButtonGroup variant="outlined" aria-label="outlined button group">
-              <Button component={Link} to="/profile">Mi Perfil</Button>
+              <Button component={Link} to="/home/profile">Mi Perfil</Button>
               <Button component={Link} to="/login">Cerrar Sesión</Button>
             </ButtonGroup>
           </Grid>

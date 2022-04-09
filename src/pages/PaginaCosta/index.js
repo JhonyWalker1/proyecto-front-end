@@ -95,8 +95,9 @@ const Costa = () => {
             recuerda seguir las indicaciones del personal guardaparque a fin de
             realizar una visita responsable.
           </p>
-
+              <a href="/home/costa/ica">
           <Button variant="contained">Saber más</Button>
+          </a>
         </Grid>
       </Grid>
       <Grid container mt={1}>
@@ -162,7 +163,9 @@ const Costa = () => {
             responsables y solidarios. De ti depende que más compatriotas estén
             libres del COVID-19. Recuerda, #VamosAVolver.
           </p>
+          <a href="/home/costa/lima"> 
           <Button variant="contained">Saber más</Button>
+          </a>
         </Grid>
       </Grid>
     </Container>
