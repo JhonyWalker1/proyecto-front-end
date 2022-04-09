@@ -34,7 +34,7 @@ const Login = () => {
       }
     }
     storeUser(response.data.user);
-    window.location.href = "/";
+    window.location.href = "/home";
   };
 
   return (

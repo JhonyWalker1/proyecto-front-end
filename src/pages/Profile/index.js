@@ -6,7 +6,7 @@ import "./index.css";
 
 const Profile = () => {
 
-    const [user, setUser] = useState([]);
+    const [user, setUser] = useState(null);
 
     
 
@@ -26,19 +26,16 @@ const Profile = () => {
     const getUserP = () => {
         onAuthStateChanged(auth, (user) => {
           if (user) {
+
+            console.log (user);
             setUser(user);
+
           } else {
             console.log("No user logged in");
           }
         });
       };
-   const fetchUser = async (profile) => {
-        const data = await getUser(profile);
-        console.log("data",data);
-        setUser(data);
-      
-    }   
-
+   
     
       useEffect(() => {
       
