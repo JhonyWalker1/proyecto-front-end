@@ -9,7 +9,9 @@ import Mainprivate from "../layouts/Headerprivate";
 import Costa from "../pages/PaginaCosta";
 import Sierra from "../pages/PaginaSierra";
 import EndSierra from "../pages/PaginaFinal";
-import EndPuno from "../pages/PaginaFinalPuno";
+import PaginaFinalPuno from "../pages/PaginaFinalPuno";
+import PagFinalLima from "../pages/PagFinalLima";
+import PagFinalIca from "../pages/PagFinalIca";
 
 const Router = () => {
   return (
@@ -27,7 +29,9 @@ const Router = () => {
         <Route path="/costa" element={<Costa />} />
         <Route path="/sierra" element={<Sierra />} />
         <Route path="/EndSierra" element={<EndSierra />} />
-        <Route path="/EndPuno" element={<EndPuno />} />
+        <Route path="/PaginaFinalPuno" element={<PaginaFinalPuno />} />
+        <Route path="/PagFinalLima" element={<PagFinalLima />} />
+        <Route path="/PagFinalIca" element={<PagFinalIca />} />
           <Route element={<Private />}>
             <Route path="/profile" element={<Profile />} />
           </Route>
