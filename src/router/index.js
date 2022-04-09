@@ -7,6 +7,7 @@ import Profile from "../pages/Profile";
 import Login from "../pages/Login";
 import Mainprivate from "../layouts/Headerprivate";
 import Costa from "../pages/PaginaCosta";
+import Selva from "../pages/PaginaSelva";
 
 const Router = () => {
   return (
@@ -22,6 +23,7 @@ const Router = () => {
         <Route element={<Mainprivate />}>
         <Route path="/home" element={<PopularRegion />} />
         <Route path="/home/costa" element={<Costa />} />
+        <Route path="/home/selva" element={<Selva />} />
           <Route element={<Private />}>
             <Route path="/profile" element={<Profile />} />
           </Route>
