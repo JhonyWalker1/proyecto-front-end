@@ -43,7 +43,7 @@ const Main = () => {
         </Grid>
         <Grid item md={3} sx={{textAlign:"center"}}>
           <ButtonGroup variant="outlined" aria-label="outlined button group">
-            <Button >Iniciar Sesión</Button>
+            <Button component={Link} to="/login">Iniciar Sesión</Button>
             <Button component={Link} to="/signup">Registrarse</Button>
           </ButtonGroup>
         </Grid>
