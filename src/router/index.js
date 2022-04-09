@@ -12,6 +12,7 @@ import EndSierra from "../pages/PaginaFinal";
 import PaginaFinalPuno from "../pages/PaginaFinalPuno";
 import PagFinalLima from "../pages/PagFinalLima";
 import PagFinalIca from "../pages/PagFinalIca";
+import PagFinalLoreto from "../pages/PagFinalLoreto";
 
 const Router = () => {
   return (
@@ -32,6 +33,7 @@ const Router = () => {
         <Route path="/PaginaFinalPuno" element={<PaginaFinalPuno />} />
         <Route path="/PagFinalLima" element={<PagFinalLima />} />
         <Route path="/PagFinalIca" element={<PagFinalIca />} />
+        <Route path="/PagFinalLoreto" element={<PagFinalLoreto />} />
           <Route element={<Private />}>
             <Route path="/profile" element={<Profile />} />
           </Route>

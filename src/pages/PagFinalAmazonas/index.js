@@ -3,7 +3,7 @@ import { Carousel, CarouselItem } from "react-bootstrap";
 import { Card, CardContent, CardMedia, Typography, Button } from "@mui/material";
 import "../PaginaFinalPuno/index.css";
 
-const EndLima = () => {
+const EndAmazonas = () => {
   return (
 
     <Grid container spacing={3}>
@@ -239,4 +239,4 @@ const EndLima = () => {
     </Grid>
   );
 };
-export default EndLima;
+export default EndAmazonas;
