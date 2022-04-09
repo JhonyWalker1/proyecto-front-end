@@ -11,7 +11,7 @@ import Sierra from "../pages/PaginaSierra";
 import Selva from "../pages/PaginaSelva";
 import Puno from "../pages/PaginaFinalPuno";
 import Cusco from "../pages/PaginaFinalCusco";
-import EndAmazonas from "../pages/PaginaFinalAmazonas";
+import EndAmazonas from "../pages/PagFinalAmazonas";
 import EndIca from "../pages/PagFinalIca";
 import EndLima from "../pages/PagFinalLima";
 import EndLoreto from "../pages/PagFinalLoreto";
