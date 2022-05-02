@@ -15,7 +15,7 @@ import EndAmazonas from "../pages/PagFinalAmazonas";
 import EndIca from "../pages/PagFinalIca";
 import EndLima from "../pages/PagFinalLima";
 import EndLoreto from "../pages/PagFinalLoreto";
-import tourIca from "../pages/Pag_info_tours/tourIca";
+
 
 
 const Router = () => {
@@ -40,7 +40,7 @@ const Router = () => {
           <Route path="/home/costa/ica" element={<EndIca />} />
           <Route path="/home/costa/lima" element={<EndLima />} />
           <Route path="/home/selva/loreto" element={<EndLoreto />} />
-          <Route path="/home/costa/ica/tourIca" element={<tourIca />} />
+         
           <Route element={<Private />}>
             <Route path="/home/profile" element={<Profile />} />
           </Route>
