@@ -27,7 +27,7 @@ const Main = () => {
               <a href="#"> Formulario</a>
             </li>
             <li>
-              <a href="#">Acerca de Nosotros</a>
+              <a href="#">Categorias</a>
             </li> 
             </ul>  
             </Grid>

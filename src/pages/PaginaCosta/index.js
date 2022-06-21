@@ -15,7 +15,7 @@ const Costa = () => {
             />
             <Carousel.Caption>
               <h1>Lima</h1>
-              <p>Marcahuasi bOsque de Piedras</p>
+              <p>Marcahuasi bosque de Piedras</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item interval={1000}>
@@ -64,10 +64,12 @@ const Costa = () => {
           </p>
         </Grid>
         <Grid item md={10}>
+        <a href="/home/costa/ica">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Paracas_National_Reserve._Ica%2C_Peru.jpg/1200px-Paracas_National_Reserve._Ica%2C_Peru.jpg"
             width={950}
           ></img>
+          </a>
         </Grid>
         <Grid item md={2} className="dato-c">
           <h4>Dato Curioso:</h4>
